@@ -1,0 +1,19 @@
+﻿@page "/ListaProducto"
+@inject HttpClient Http
+
+<h3>Lista de Producto</h3>
+<p>@mensaje</p>
+@code {
+    private string mensaje = "";
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            mensaje = await Http.GetStringAsync("api/producto");
+        }
+        catch (Exception ex)
+        {
+            mensaje = $"Error al obtener los productos: {ex.Message}";
+        }
+    }
+}

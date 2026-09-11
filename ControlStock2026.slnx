@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="ClienteStock.Cliente/ClienteStock.Cliente.csproj" />
+  <Project Path="ControlStock.BD/ControlStock.BD.csproj" />
+  <Project Path="ControlStock.Repositorio/ControlStock.Repositorio.csproj" />
+  <Project Path="ControlStock.Shared/ControlStock.Shared.csproj" />
+  <Project Path="ControlStock2026.Server/ControlStock2026.Server.csproj" />
+  <Project Path="CrontolStock.Servicio/CrontolStock.Servicio.csproj" />
+</Solution>
