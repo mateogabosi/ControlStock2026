@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-namespace ControlStock2026.BD.Datos.EntitY
+
+
+namespace ControlStock2026.BD.Datos.Entity
 {
-    internal class Entitybase
+    public class EntityBase
     {
         public int Id { get; set; }
     }

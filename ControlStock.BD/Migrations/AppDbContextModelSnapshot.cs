@@ -53,11 +53,12 @@ namespace ControlStock.BD.Migrations
 
             modelBuilder.Entity("ControlStock2026.BD.Datos.Entity.Producto", b =>
                 {
-                    b.Property<int>("IdProductos")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+                        .HasColumnType("int")
+                        .HasColumnName("IdProductos");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdProductos"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Descripcion")
                         .IsRequired()
@@ -67,19 +68,17 @@ namespace ControlStock.BD.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Precio")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<decimal>("Precio")
+                        .HasColumnType("decimal(18,2)");
 
-                    b.Property<string>("StockAcatual")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("StockActual")
+                        .HasColumnType("int")
+                        .HasColumnName("StockAcatual");
 
-                    b.Property<string>("StockMinimo")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("StockMinimo")
+                        .HasColumnType("int");
 
-                    b.HasKey("IdProductos");
+                    b.HasKey("Id");
 
                     b.ToTable("Productos");
                 });

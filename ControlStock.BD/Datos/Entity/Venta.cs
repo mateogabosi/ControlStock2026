@@ -1,20 +1,14 @@
-﻿using Microsoft.VisualBasic;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace ControlStock2026.BD.Datos.Entity
 {
     public class Venta : EntityBase
     {
-        //[Required(ErrorMessage = "El dato es obligatorio")]
-        [Key]
-        public int IdVentas { get; set; }
-        public int Total { get; set; }
-        public int ProductoId { get; set; }
-        public int Cantidad { get; set; }
-        public decimal PrecioUnitario { get; set; }
-        public decimal Subtotal { get; set; }
+        public DateTime Fecha { get; set; } = DateTime.Now;
+
+        public decimal Total { get; set; }
+
+        // Propiedad de navegación para los detalles de la venta (si lo usas en tu relación)
+        public virtual ICollection<DetalleVenta>? DetalleVentas { get; set; }
     }
 }

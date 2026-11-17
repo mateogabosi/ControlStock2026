@@ -13,12 +13,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\Producto\" />
+    <ProjectReference Include="..\ControlStock.Shared\ControlStock.Shared.csproj" />
+    <ProjectReference Include="..\CrontolStock.Servicio\CrontolStock.Servicio.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ControlStock.Shared\ControlStock.Shared.csproj" />
-    <ProjectReference Include="..\CrontolStock.Servicio\CrontolStock.Servicio.csproj" />
+    <Folder Include="Pages\Producto\" />
   </ItemGroup>
 
 </Project>

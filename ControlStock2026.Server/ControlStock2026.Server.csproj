@@ -28,4 +28,8 @@
     <ProjectReference Include="..\CrontolStock.Servicio\CrontolStock.Servicio.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\" />
+  </ItemGroup>
+
 </Project>
